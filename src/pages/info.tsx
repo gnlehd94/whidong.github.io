@@ -24,6 +24,11 @@ const globalStyle = css`
     font-size: 20px;
   }
 `
+const TextStyle = css`
+  font-size: 18px;
+  font-weight: 700;
+  color: gray;
+`
 
 const InfoPage: FunctionComponent<InfoPageProps> = function ({
   data: {
@@ -35,6 +40,7 @@ const InfoPage: FunctionComponent<InfoPageProps> = function ({
   return (
     <div>
       <Global styles={globalStyle} />
+      <div css={TextStyle}>{title}</div>
       {title} {description} {author}
     </div>
   )
