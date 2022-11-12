@@ -6,11 +6,12 @@ import Introduction from 'components/Main/Introduction'
 import CategoryList from 'components/Main/CategoryList'
 import PostList, { PostType } from 'components/Main/PostList'
 import { graphql } from 'gatsby'
+import { PostListItemType } from 'types/PostItem.types'
 
 type IndexPageProps = {
   data: {
     allMarkdownRemark: {
-      edges: PostType[]
+      edges: PostListItemType[]
     }
   }
 }
